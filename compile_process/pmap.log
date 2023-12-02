@@ -1,0 +1,25 @@
+80842:   ./a.out
+000055df4939e000      4K r---- a.out
+000055df4939f000      4K r-x-- a.out
+000055df493a0000      4K r---- a.out
+000055df493a1000      4K r---- a.out
+000055df493a2000      4K rw--- a.out
+000055df493fc000    132K rw---   [ anon ]
+00007f4a00e00000    160K r---- libc.so.6
+00007f4a00e28000   1620K r-x-- libc.so.6
+00007f4a00fbd000    352K r---- libc.so.6
+00007f4a01015000     16K r---- libc.so.6
+00007f4a01019000      8K rw--- libc.so.6
+00007f4a0101b000     52K rw---   [ anon ]
+00007f4a0116a000     12K rw---   [ anon ]
+00007f4a01183000      8K rw---   [ anon ]
+00007f4a01185000      8K r---- ld-linux-x86-64.so.2
+00007f4a01187000    168K r-x-- ld-linux-x86-64.so.2
+00007f4a011b1000     44K r---- ld-linux-x86-64.so.2
+00007f4a011bd000      8K r---- ld-linux-x86-64.so.2
+00007f4a011bf000      8K rw--- ld-linux-x86-64.so.2
+00007fff27c9c000    132K rw---   [ stack ]
+00007fff27dc8000     16K r----   [ anon ]
+00007fff27dcc000      8K r-x--   [ anon ]
+ffffffffff600000      4K --x--   [ anon ]
+ total             2776K

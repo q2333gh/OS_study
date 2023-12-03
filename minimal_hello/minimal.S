@@ -1,15 +1,17 @@
+
 #include <sys/syscall.h>
-/*
-* can not use ; as comments in .S file of somewhere 
-* this line above is pre processor handled. defination replacement 
-* use  gcc -E minimal.S  to extend all the macros and definations in assembly file .
-* TODO interesting :how to reverse this behaviour to get all syscall number ? maybe diff ISA have diff sycall.h ? 
-* use for reverse-compile(binary-> high level languages :such as C ).
-*
-* the #include <sys/syscall.h> is define at c code with attribute : __ASSEMBLER__ to tell compiler that the macro is compatible with assembly file.
-*/
 
 
+;
+;can not use ; as comments in .S file of somewhere 
+;this line above is pre processor handled. defination replacement 
+;use  gcc -E minimal.S  to extend all the macros and definations in assembly file .
+;TODO interesting :how to reverse this behaviour to get all syscall number ? maybe diff ISA have diff sycall.h ? 
+;use for reverse-compile(binary-> high level languages :such as C ).
+;
+;the #include <sys/syscall.h> is define at c code with attribute : __ASSEMBLER__ to tell compiler that the macro is compatible with assembly file.
+;
+;
 
 .globl _start
 _start:
@@ -28,3 +30,10 @@ _start:
 st:
   .ascii "\033[01;31mHello, OS World\033[0m\n"
 ed:
+
+;
+;\033[01;31m  ANSI escape sequences that are used to control 
+;
+;`Hello, OS World` to hex:
+;48 65 6C 6C 6F 2C 20 4F 53 20 57 6F 72 6C 64 20
+;

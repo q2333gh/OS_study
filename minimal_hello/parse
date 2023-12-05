@@ -1,0 +1,15 @@
+import os
+
+
+def parse_binary_file(filename):
+    if not os.path.exists(filename):
+        print(f"The file {filename} does not exist.")
+        return
+
+    with open(filename, "rb") as f:
+        while byte := f.read(1):
+            print(f"{byte.hex()} ", end="")
+        print()
+
+
+parse_binary_file("a.out")

@@ -1,0 +1,6 @@
+*.o
+*.out
+
+# *
+# this means no suffix name file will ignore (such as hello test1   )
+

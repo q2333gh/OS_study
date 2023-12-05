@@ -59,6 +59,7 @@
   "files.associations": {
     "stdio.h": "c",
     "syscall.h": "c",
-    "unistd.h": "c"
+    "unistd.h": "c",
+    "become_daemon.h": "c"
   }
 }

@@ -60,6 +60,12 @@
     "stdio.h": "c",
     "syscall.h": "c",
     "unistd.h": "c",
-    "become_daemon.h": "c"
+    "become_daemon.h": "c",
+    "csapp.h": "c",
+    "signal.h": "c",
+    "stdarg.h": "c",
+    "stdint-uintn.h": "c",
+    "types.h": "c",
+    "socket.h": "c"
   }
 }

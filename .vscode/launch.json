@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/btwl/code/OS_study/daemon_process",
-      "program": "/home/btwl/code/OS_study/daemon_process/build/Debug/outDebug",
+      "cwd": "/home/btwl/code/OS_study/csapp_code/arch",
+      "program": "/home/btwl/code/OS_study/csapp_code/arch/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

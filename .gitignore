@@ -4,3 +4,7 @@
 # *
 # this means no suffix name file will ignore (such as hello test1   )
 
+# Ignore all files without extension
+*[^.]*
+!Makefile
+!README

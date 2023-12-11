@@ -9,9 +9,8 @@ void *run_client(void *arg) {
   return NULL;
 }
 
-
 // using 5000 threads is OK~
-// 5000 process not OK~ even pretty lag. 
+// 5000 process not OK~ even pretty lag.
 int main(int argc, char *argv[]) {
   if (argc != 2) {
     printf("Usage: ./program <count>\n");
@@ -20,7 +19,9 @@ int main(int argc, char *argv[]) {
 
   int count = s2i(argv[1]);  // Convert the command-line argument to an integer
 
-  // Declare an array of thread identifiers
+  // TODO learn thread apis with thread concepts(back and forth recursive
+  // complement each other). and also learn process apis and concepts. Declare
+  // an array of thread identifiers
   pthread_t thread_ids[count];
 
   // Create a thread for each system function call

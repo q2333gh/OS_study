@@ -11,6 +11,12 @@
 // and namespace.
 #define clear_mem_region(obj) (memset(&(obj), 0, sizeof(obj)))
 
+// Declare a global variable for the client counter
+int client_count = 0;
+
+// Declare a global mutex for the counter variable
+pthread_mutex_t count_mutex = PTHREAD_MUTEX_INITIALIZER;
+
 // This is the thread function
 void *Hello(void *arg) {
   int connfd = (int)arg;  // Cast the argument to int
@@ -22,6 +28,11 @@ void *Hello(void *arg) {
   return NULL;
 }
 
+// when server receive each client call. new a thread.
+// TODO a threa-pool maybe faster
+// TODO profiler. throughtput
+// TODO how do using OS-shchdule to keep this running in heavy load threads and
+// user shell still response most privilaged?
 int main() {
   // socket()
   int sockfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -48,6 +59,8 @@ int main() {
   }
 
   // loop
+  // TODO why while(1) here . when not receiving new client calls . will not
+  // cause CPU runing 100%?
   while (1) {
     // accept()
     struct sockaddr_in cli_addr;
@@ -67,6 +80,18 @@ int main() {
     pthread_detach(
         thread_id);  // Detach the thread so that it can run independently and
                      // release its resources when it finishes
+    // lock the mutex
+    pthread_mutex_lock(
+        &count_mutex);  // Lock the mutex to protect the counter variable
+    // increment the counter
+    client_count++;  // Increment the counter by one
+    // print the counter
+    printf("Number of clients: %d\n",
+           client_count);  // Print the counter value to the terminal
+    // unlock the mutex
+    pthread_mutex_unlock(
+        &count_mutex);  // Unlock the mutex to allow other threads to access the
+                        // counter variable
     // return to the loop
   }
 
@@ -74,4 +99,3 @@ int main() {
   close(sockfd);
   return 0;
 }
-

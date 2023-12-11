@@ -79,6 +79,9 @@ int main() {
     pthread_detach(
         thread_id);  // Detach the thread so that it can run independently and
                      // release its resources when it finishes
+
+    //   TODO how slower will this lock causing speed?  wrap this  below  into a
+    //   function and testing it .
     // lock the mutex
     pthread_mutex_lock(
         &count_mutex);  // Lock the mutex to protect the counter variable

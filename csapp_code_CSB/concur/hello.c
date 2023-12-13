@@ -18,7 +18,7 @@ int main() {
   strcpy(my_para.b, "Hello, thread!");
 
   //   after create. the thread will immeadiately start to run.
-  // actually 2 state machine start to run.
+  // so actually 2 state machine start to run.
   pthread_create(&tid, NULL, thread,
                  (void *)&my_para);  // line:conc:hello:create
   //   wait(telling the caller to block )for thread to finishing job.

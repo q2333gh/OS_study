@@ -66,6 +66,7 @@
     "stdarg.h": "c",
     "stdint-uintn.h": "c",
     "types.h": "c",
-    "socket.h": "c"
+    "socket.h": "c",
+    "stdlib.h": "c"
   }
 }

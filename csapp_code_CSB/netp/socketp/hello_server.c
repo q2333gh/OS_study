@@ -38,8 +38,8 @@ int main() {
 
   // accept()
   struct sockaddr_in cli_addr;
-  socklen_t cli_len = sizeof(cli_addr);
-  int connfd = accept(sockfd, (struct sockaddr *)&cli_addr, &cli_len);
+  socklen_t cli_addr_len = sizeof(cli_addr);
+  int connfd = accept(sockfd, (struct sockaddr *)&cli_addr, &cli_addr_len);
   if (connfd < 0) {
     perror("accept failed");
     exit(EXIT_FAILURE);
@@ -52,4 +52,5 @@ int main() {
   // clear()
   close(sockfd);
   return 0;
+  
 }

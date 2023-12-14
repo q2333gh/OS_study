@@ -7,16 +7,15 @@
 #include <unistd.h>
 
 #define clear_mem_region(obj) (memset(&(obj), 0, sizeof(obj)))
-#define try(expression) \
-  if ((expression) < 0) { \
+#define try(expression)            \
+  if ((expression) < 0) {          \
     perror(#expression " failed"); \
-    exit(EXIT_FAILURE); \
+    exit(EXIT_FAILURE);            \
   }
 
 int main() {
-  
   //**** the comments functions is most improtant execution. others statements
-  //just
+  // just
   // ****collect nessesary data ****
 
   // socket()
@@ -36,6 +35,13 @@ int main() {
 
   // listen()
   try(listen(sockfd, 5));
+  // vscode says: Expands to:
+  // if ((listen(sockfd, 5)) < 0) {
+  //   perror(
+  //       "listen(sockfd, 5)"
+  //       " failed");   but actually is "listen(sockfd, 5) failed""
+  //   exit(1);
+  // }
 
   // accept()
   struct sockaddr_in cli_addr;
@@ -46,6 +52,7 @@ int main() {
   // write()
   char *message = "Hello world!";
   write(connfd, message, strlen(message));
+
   close(connfd);
 
   // clear()

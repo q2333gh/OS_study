@@ -3,6 +3,7 @@
 // Is clousure and callback actually a kind of Functional Programming?
 
 #include <stdio.h>
+#include <sys/mman.h>
 
 typedef struct {
   // Define the struct for WalletState
@@ -22,6 +23,5 @@ void print_wallet_state(const WalletState* state) {
 
 int main() {
   with_wallet(print_wallet_state);
-
   return 0;
 }

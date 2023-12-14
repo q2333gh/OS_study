@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/btwl/code/OS_study/csapp_code_CSB/netp/socketp",
-      "program": "/home/btwl/code/OS_study/csapp_code_CSB/netp/socketp/build/Debug/outDebug",
+      "cwd": "/home/btwl/code/OS_study/csapp_code_CSB/concur",
+      "program": "/home/btwl/code/OS_study/csapp_code_CSB/concur/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

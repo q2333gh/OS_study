@@ -68,6 +68,7 @@
     "types.h": "c",
     "socket.h": "c",
     "stdlib.h": "c",
-    "*.in": "cpp"
+    "*.in": "cpp",
+    "getopt.h": "c"
   }
 }

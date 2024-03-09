@@ -69,6 +69,8 @@
     "socket.h": "c",
     "stdlib.h": "c",
     "*.in": "cpp",
-    "getopt.h": "c"
-  }
+    "getopt.h": "c",
+    "common.h": "c"
+  },
+  "livePreview.defaultPreviewPath": "/nju_ics2023/abstract-machine/Makefile.html"
 }
